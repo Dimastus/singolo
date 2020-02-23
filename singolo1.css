@@ -72,5 +72,45 @@ body {
 /*--------- end LOGO --------*/
 
 /*--------- start NAVIGATION --------*/
+.navigation__links {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navigation__link:not(:first-child):before {
+    content: "·";
+    color: #494e62;
+    margin-left: -17px;
+    position: absolute;
+}
+
+.navigation__link {
+    position: relative;
+    margin: 0 15px;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+}
+
+.navigation__link:hover {
+    cursor: pointer;
+    color: #dc655f;
+}
+
+.navigation__link_action {
+    color: #dc655f;
+}
+
+.navigation__link:last-child {
+    margin-right: 0;
+}
+
 /*--------- end NAVIGATION --------*/
 /*======================*/
