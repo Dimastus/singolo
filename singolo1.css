@@ -22,3 +22,55 @@ body {
     width: 940px;
     margin: 0 auto;
 }
+
+/*======== HEADER ========*/
+.header {
+    height: 90px;
+    background: #2d303a;
+    padding-top: 28px;
+    box-shadow: 0 6px #323746;
+}
+
+.header .wrapper {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    align-items: flex-end;
+}
+
+/*--------- start LOGO --------*/
+.header__logo {
+    letter-spacing: -0.6px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.header__logo a {
+    color: #fff;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.header__logo a:hover {
+    color: #dc655f;
+}
+
+.header__logo::after {
+    content: "*";
+    color: #dc655f;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.header__logo:hover::after {
+    content: "*";
+    color: #fff;
+}
+
+/*--------- end LOGO --------*/
+
+/*--------- start NAVIGATION --------*/
+/*--------- end NAVIGATION --------*/
+/*======================*/
