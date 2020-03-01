@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    max-width: 1020px;
+    width: 100%;
+}
+
+.wrapper {
+    width: 940px;
+    margin: 0 auto;
+}
+
+/*======== CONTENT ========*/
+/*-------- start PORTFOLIO -------*/
+.content__portfolio {
+    height: 864px;
+    background-color: #2d303a;
+    box-shadow: 0 6px #323746;
+    padding: 60px 0;
+}
+
+.portfolio__title,
+.about__title {
+    color: #666d89;
+    font-size: 3rem;
+    font-weight: 900;
+    /* letter-spacing: 0.05px; */
+}
+
+.portfolio__text,
+.about__text {
+    margin-top: 18px;
+    color: #767e9e;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+/*-------- start filter -------*/
+.portfolio__filter {
+    margin-top: 11px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: start;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.filter__name {
+    color: #767e9e;
+    padding: 2.5px 6.5px;
+    font-size: 1.2rem;
+    letter-spacing: -0.1px;
+    border: 1px solid #767e9e;
+    border-radius: 5px;
+    margin-left: 1px;
+}
+
+.filter__name:not(:first-child) {
+    margin-left: 10px;
+}
+
+.filter__name:nth-child(3),
+.filter__name:nth-child(4) {
+    padding: 2.5px 6px;
+}
+
+.filter__name_action {
+    color: #dedede;
+    border: 1px solid #dedede;
+}
+
+.filter__name:hover {
+    color: #dedede;
+    border: 1px solid #dedede;
+    cursor: pointer;
+}
+
+/*---------- end filter ---------*/
+/*--------- start galery --------*/
+.portfolio__gallery {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 620px;
+    overflow: hidden;
+}
+
+.gallery__img {
+    margin-top: 19.5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery__img>img {
+    display: block;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.gallery__img>img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/*--------- end galery --------*/
+/*--------- end PORTFOLIO --------*/
+
+/*--------- start ABOUT US -------*/
+.content__about {
+    margin-top: 6px;
+    padding: 59px 0 65px;
+    height: 729px;
+    background-color: #f2f2f2;
+    box-shadow: 0 6px #fff;
+}
+
+.about__text {
+    text-align: justify;
+}
+
+/*--------- start cards -------*/
+.about__cards {
+    margin-top: 45px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.card__person {
+    width: 300px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.person__foto {
+    overflow: hidden;
+}
+
+.person__foto>img {
+    display: block;
+}
+
+.person__name {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -0.2px;
+    margin-top: 15px;
+    color: #666d89;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.person__description {
+    font-size: 1.2rem;
+    line-height: 21.56px;
+    letter-spacing: -0.1px;
+    margin-top: 8px;
+    text-align: justify;
+}
+
+/*--------- start social ---------*/
+.person__social {
+    margin-top: 25px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.social__icon {
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+}
+
+.social__icon:hover {
+    background-color: #666d89;
+    cursor: pointer;
+}
+
+.social__icon:hover img {
+    -webkit-filter: brightness(2);
+    filter: brightness(2);
+}
+
+.social__icon:not(:first-child) {
+    margin-left: 8px;
+}
+
+.social__icon img {
+    margin: 0 auto;
+    display: block;
+}
+
+/*----------- end social ---------*/
+/*----------- end cards ---------*/
+/*--------- end ABOUT US --------*/
+/*======================*/
