@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    max-width: 1020px;
+    width: 100%;
+}
+
+.wrapper {
+    width: 940px;
+    margin: 0 auto;
+}
+
+/*======== CONTENT ========*/
+/*-------- start QUOTE -------*/
+.content__quote {
+    background: #f06c64;
+    height: 648px;
+    box-shadow: 0 6px #ea676b;
+    padding: 60px 0;
+}
+
+.quote__title {
+    color: #f0d8d9;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.quote__text {
+    margin-top: 18px;
+    color: #f0d8d9;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.quote__block {
+    display: -webkit-box;
+    display: flex;
+    margin-top: 35px;
+}
+
+/*-------- start FORM -------*/
+.quote__form {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    width: 620px;
+    position: relative;
+}
+
+.quote__form input,
+.quote__form textarea {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 15px 11px;
+    background-color: #d6564f;
+    color: #f48c8f;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.quote__form textarea {
+    height: 202px;
+    resize: none;
+}
+
+.quote__form input::-webkit-input-placeholder,
+.quote__form textarea::-webkit-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-moz-placeholder,
+.quote__form textarea::-moz-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input:-ms-input-placeholder,
+.quote__form textarea:-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-ms-input-placeholder,
+.quote__form textarea::-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-webkit-input-placeholder,
+.quote__form textarea::-webkit-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-moz-placeholder,
+.quote__form textarea::-moz-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input:-ms-input-placeholder,
+.quote__form textarea:-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-ms-input-placeholder,
+.quote__form textarea::-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-webkit-input-placeholder,
+.quote__form textarea::-webkit-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-moz-placeholder,
+.quote__form textarea::-moz-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input:-ms-input-placeholder,
+.quote__form textarea:-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-ms-input-placeholder,
+.quote__form textarea::-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::placeholder,
+.quote__form textarea::placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input:not([type="submit"]):focus,
+.quote__form textarea:focus {
+    background-color: #cf443d;
+    color: #fff;
+    font-weight: bold;
+}
+
+.quote__form input:not([type="submit"]):hover,
+.quote__form textarea:hover {
+    background-color: #cf443d;
+}
+
+.quote__form input[type="submit"] {
+    position: absolute;
+    width: 10%;
+    right: 0;
+    bottom: 0;
+    border: 1px dashed #f0d8d9;
+    color: #fff;
+    background: #df5f58;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.quote__form input[type="submit"]:hover {
+    cursor: pointer;
+    background: #db554e;
+    box-shadow: inset 0 0 5px #000, 0 0 5px 1px #000;
+    text-shadow: 1px 1px #000;
+}
+
+.quote__form input[type="submit"]:focus {
+    background-color: crimson;
+}
+
+.quote__form input[type="submit"]:active {
+    background-color: blanchedalmond;
+    color: brown;
+}
+
+/*-------- end FORM -------*/
+/*-------- start INFORMATION -------*/
+.quote__info {
+    margin-top: 6px;
+    margin-left: 20px;
+    width: 300px;
+}
+
+.info__title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #f0d8d9;
+}
+
+.info__text {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    color: #f0d8d9;
+    text-align: justify;
+    line-height: 22px;
+    letter-spacing: -0.1px;
+}
+
+.info__contact {
+    margin-top: 20px;
+    margin-left: 2px;
+    font-size: 1.2rem;
+    color: #f0d8d9;
+    line-height: 21px;
+}
+
+.info__contact address,
+.info__contact a {
+    display: block;
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position: center left;
+    color: #f0d8d9;
+}
+
+.contact__address {
+    background-image: url(assets/icon-location.png);
+}
+
+.contact__phone {
+    background-image: url(assets/icon-phone.png);
+}
+
+.contact__email {
+    background-image: url(assets/icon-mail.png);
+    margin-top: 1px;
+}
+
+
+.info__contact address:hover,
+.info__contact a:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    color: cornsilk;
+}
+
+/*-------- end INFORMATION -------*/
+/*--------- end QUOTE --------*/
+/*======================*/
+
+/*======= FOOTER =======*/
+.footer {
+    margin-top: 6px;
+    height: 77px;
+    background-color: #2d303a;
+}
+
+.footer .wrapper {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.footer__copyright {
+    margin-top: 20px;
+    margin-left: 2px;
+    color: #666d89;
+    font-size: 1.2rem;
+    letter-spacing: -0.2px;
+}
+
+.footer__copyright:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+/*--- start SOCIAL FOOTER ----*/
+.footer__social {
+    margin-top: 22px;
+    display: -webkit-box;
+    display: flex;
+}
+
+.footer__social div {
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+}
+
+.footer__social div:not(:last-child) {
+    margin-right: 8px;
+}
+
+.footer__social .social__icon img {
+    margin: 0 auto;
+    display: block;
+}
+
+.social__icon:hover {
+    background-color: #666d89;
+    cursor: pointer;
+}
+
+.footer__social .social__icon:hover img {
+    -webkit-filter: brightness(2);
+    filter: brightness(2);
+}
+
+/*---- end SOCIAL FOOTER -----*/
+/*======================*/
