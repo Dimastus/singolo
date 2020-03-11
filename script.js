@@ -1,6 +1,8 @@
 'use strict';
 //for NAVIGATION
 let navMenu = document.querySelector('.navigation__links');
+//for PORTFOLIO
+let portfolioFilters = document.querySelector('.portfolio__filter');
 //for SLIDER
 let sliderSection = document.querySelector('.content__slider');
 let slide = document.querySelector('.slider')
@@ -9,18 +11,21 @@ let nextBtn = document.querySelector('.img_next');
 let prevBtn = document.querySelector('.img_prev');
 
 
-navMenu.addEventListener('click', changeLink);
+navMenu.addEventListener('click', (e) => changeLink(navMenu, e));
+portfolioFilters.addEventListener('click', (e) => changeLink(portfolioFilters, e));
 navMenu.addEventListener('click', scrollToSection);
 nextBtn.addEventListener('click', changeSlide);
 prevBtn.addEventListener('click', changeSlide);
 
 
-function changeLink(e){
-    let child = Array.from(navMenu.children);
+function changeLink(parent, e){
+    let child = Array.from(parent.children);
+    let className = child[0].classList[0];
+
     child.forEach(element => {
-        element.classList.remove('navigation__link_action');
+        element.classList.remove(`${className}_action`);
     });
-    if (e.target.tagName === 'LI') e.target.classList.add('navigation__link_action');
+    if (e.target.tagName === 'LI' || e.target.tagName === 'DIV') e.target.classList.add(`${className}_action`);
 }
 
 function scrollToSection(e) {
