@@ -15,6 +15,7 @@ let prevBtn = document.querySelector('.img_prev');
 navMenu.addEventListener('click', (e) => changeLink(navMenu, e));
 portfolioFilters.addEventListener('click', (e) => changeLink(portfolioFilters, e));
 portfolioFilters.addEventListener('click', (e) => randomImg(galleryImg, e));
+galleryImg.addEventListener('click', choiceImg);
 navMenu.addEventListener('click', scrollToSection);
 nextBtn.addEventListener('click', changeSlide);
 prevBtn.addEventListener('click', changeSlide);
@@ -80,4 +81,19 @@ function randomImg(parent, e) {
 function randomInteger(min, max) {
     let rand = min + Math.random() * (max - min + 1);
     return Math.floor(rand);
+}
+
+function choiceImg(e) {
+    let elem = e.target;
+    if (elem.tagName === "IMG") {
+        let images = [...galleryImg.children];
+        images.forEach(element => {
+            element.children[0].style.transition = 'transform .5s';
+            element.style.border = 'none';
+            element.children[0].style.margin = '0';
+        });
+
+        elem.style.margin = '-5px';
+        elem.parentElement.style.border = '5px solid #F06C64';
+    }
 }
