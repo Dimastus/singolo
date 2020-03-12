@@ -43,8 +43,9 @@ function scrollToSection(e) {
         },
         nameClass = `content__${namesSections[e.target.innerHTML]}`;
     if (e.target.tagName === 'LI') {
-        let elem = document.querySelector(`.${nameClass}`).getBoundingClientRect();
-        window.scrollTo(0, elem.top);
+        // let elem = document.querySelector(`.${nameClass}`).getBoundingClientRect();
+        // window.scrollTo(0, elem.top);
+        document.querySelector(`.${nameClass}`).scrollIntoView({block: "start", behavior: "smooth"});
     }
 
 }
