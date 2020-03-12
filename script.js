@@ -3,6 +3,7 @@
 let navMenu = document.querySelector('.navigation__links');
 //for PORTFOLIO
 let portfolioFilters = document.querySelector('.portfolio__filter');
+let galleryImg = document.querySelector('.portfolio__gallery');
 //for SLIDER
 let sliderSection = document.querySelector('.content__slider');
 let slide = document.querySelector('.slider')
@@ -13,40 +14,43 @@ let prevBtn = document.querySelector('.img_prev');
 
 navMenu.addEventListener('click', (e) => changeLink(navMenu, e));
 portfolioFilters.addEventListener('click', (e) => changeLink(portfolioFilters, e));
+portfolioFilters.addEventListener('click', (e) => randomImg(galleryImg, e));
 navMenu.addEventListener('click', scrollToSection);
 nextBtn.addEventListener('click', changeSlide);
 prevBtn.addEventListener('click', changeSlide);
 
 
-function changeLink(parent, e){
-    let child = Array.from(parent.children);
-    let className = child[0].classList[0];
+function changeLink(parent, e) {
+    if (e.target.tagName === 'LI' || e.target.tagName === 'DIV' && e.target.classList.contains('filter__name')) {
+        let child = Array.from(parent.children);
+        let className = child[0].classList[0];
 
-    child.forEach(element => {
-        element.classList.remove(`${className}_action`);
-    });
-    if (e.target.tagName === 'LI' || e.target.tagName === 'DIV') e.target.classList.add(`${className}_action`);
+        child.forEach(element => {
+            element.classList.remove(`${className}_action`);
+        });
+        e.target.classList.add(`${className}_action`);
+    }
 }
 
 function scrollToSection(e) {
     let namesSections = {
-        home: 'slider',
-        services: 'services',
-        portfolio: 'portfolio',
-        about: 'about',
-        contact: 'quote'
-    },
+            home: 'slider',
+            services: 'services',
+            portfolio: 'portfolio',
+            about: 'about',
+            contact: 'quote'
+        },
         nameClass = `content__${namesSections[e.target.innerHTML]}`;
     if (e.target.tagName === 'LI') {
         let elem = document.querySelector(`.${nameClass}`).getBoundingClientRect();
-       window.scrollTo(0, elem.top);
+        window.scrollTo(0, elem.top);
     }
 
 }
 
 function changeSlide() {
     let countChild = slide.children.length;
-    if(countChild == 2) {
+    if (countChild == 2) {
         slide.innerHTML = '';
         let slideTwo = '<img src="assets/slide2.png" class="slider__img2" alt="image3">';
         slide.innerHTML = slideTwo;
@@ -58,4 +62,22 @@ function changeSlide() {
         sliderSection.style.backgroundColor = '#f06c64';
         sliderSection.style.boxShadow = '0 6px #ea676b';
     }
+}
+
+function randomImg(parent, e) {
+    if (e.target.tagName === 'DIV' && e.target.classList.contains('filter__name')) {
+        let images = Array.from(parent.querySelectorAll('.gallery__img img'));
+        let links = [].concat(images).map(e => e.getAttribute('src'));
+
+        images.forEach(element => {
+            let link = links[randomInteger(0, links.length - 1)];
+            element.setAttribute('src', link);
+            links.splice(links.indexOf(link), 1);
+        });
+    }
+}
+
+function randomInteger(min, max) {
+    let rand = min + Math.random() * (max - min + 1);
+    return Math.floor(rand);
 }
