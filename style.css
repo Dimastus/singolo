@@ -131,6 +131,7 @@ body {
 .img_prev,
 .img_next {
     position: absolute;
+    z-index: 1;
 }
 
 .img_prev:hover img,

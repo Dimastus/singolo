@@ -10,10 +10,6 @@ let slide = document.querySelector('.slider')
 let clone = slide.innerHTML;
 let nextBtn = document.querySelector('.img_next');
 let prevBtn = document.querySelector('.img_prev');
-let btnFirstMobile = document.querySelector('#first-mobile');
-let firstMobile = document.querySelector('.slider__img[alt="image1"]');
-let btnSecondMobile = document.querySelector('#second-mobile');
-let secondMobile = document.querySelector('.slider__img[alt="image2"]');
 //for CONTACT
 let formContact = document.forms['quote__form'];
 
@@ -26,8 +22,7 @@ galleryImg.addEventListener('click', choiceImg);
 navMenu.addEventListener('click', scrollToSection);
 nextBtn.addEventListener('click', changeSlide);
 prevBtn.addEventListener('click', changeSlide);
-btnFirstMobile.addEventListener('click', () => onOffBackground(firstMobile));
-btnSecondMobile.addEventListener('click', () => onOffBackground(secondMobile));
+slide.addEventListener('click', onOffBackground);
 formContact.addEventListener('submit', createModal);
 
 
@@ -55,15 +50,17 @@ function scrollToSection(e) {
     if (e.target.tagName === 'LI') {
         // let elem = document.querySelector(`.${nameClass}`).getBoundingClientRect();
         // window.scrollTo(0, elem.top);
-        document.querySelector(`.${nameClass}`).scrollIntoView({block: "start", behavior: "smooth"});
+        document.querySelector(`.${nameClass}`).scrollIntoView({
+            block: "start",
+            behavior: "smooth"
+        });
     }
 
 }
 
 function changeSlide() {
     let countChild = slide.children.length;
-    if (countChild == 2) {
-        slide.innerHTML = '';
+    if (countChild == 4) {
         let slideTwo = '<img src="assets/slide2.png" class="slider__img2" alt="image3">';
         slide.innerHTML = slideTwo;
         sliderSection.style.backgroundColor = '#648bf0';
@@ -109,8 +106,18 @@ function choiceImg(e) {
     }
 }
 
-function onOffBackground(elem) {
-    elem.classList.toggle('back-black');
+function onOffBackground(e) {
+    let btnFirstMobile = document.querySelector('#first-mobile');
+    let firstMobile = document.querySelector('.slider__img[alt="image1"]');
+    let btnSecondMobile = document.querySelector('#second-mobile');
+    let secondMobile = document.querySelector('.slider__img[alt="image2"]');
+
+    if (e.target === btnFirstMobile) {
+        firstMobile.classList.toggle('back-black');
+    }
+    if (e.target === btnSecondMobile) {
+        secondMobile.classList.toggle('back-black');
+    }
 }
 
 function createModal(e) {
