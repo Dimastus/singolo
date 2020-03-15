@@ -156,6 +156,7 @@ body {
     align-items: center;
     -webkit-box-pack: start;
     justify-content: flex-start;
+    position: relative;
 }
 
 .slider__img {
@@ -168,6 +169,35 @@ body {
     box-shadow: 24px 25px #ce5d56, 10px 10px #ce5d56, 15px 15px #ce5d56, 20px 20px #ce5d56;
     -webkit-transition: all 2s;
     transition: all 2s;
+}
+
+.mobile__btn {
+    width: 44px;
+    height: 44px;
+    content: url(assets/button.png);
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+#first-mobile {
+    left: 157px;
+    bottom: 7px;
+}
+
+#second-mobile {
+    left: 394px;
+    bottom: 209px;
+}
+
+#first-mobile:hover,
+#second-mobile:hover {
+    cursor: pointer;
+    box-shadow: 0 0 3px 1px silver;
+}
+
+.back-black {
+    background: url(assets/black.png) repeat !important;
 }
 
 .slider__img:last-child {
@@ -314,7 +344,7 @@ body {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: start;
-    justify-content: start;
+    justify-content: flex-start;
     -webkit-box-align: center;
     align-items: center;
 }
@@ -609,6 +639,102 @@ body {
     color: #f48c8f;
 }
 
+.quote__form input::-webkit-input-placeholder,
+.quote__form textarea::-webkit-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-moz-placeholder,
+.quote__form textarea::-moz-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input:-ms-input-placeholder,
+.quote__form textarea:-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-ms-input-placeholder,
+.quote__form textarea::-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-webkit-input-placeholder,
+.quote__form textarea::-webkit-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-moz-placeholder,
+.quote__form textarea::-moz-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input:-ms-input-placeholder,
+.quote__form textarea:-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-ms-input-placeholder,
+.quote__form textarea::-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-webkit-input-placeholder,
+.quote__form textarea::-webkit-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-moz-placeholder,
+.quote__form textarea::-moz-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input:-ms-input-placeholder,
+.quote__form textarea:-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-ms-input-placeholder,
+.quote__form textarea::-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-webkit-input-placeholder,
+.quote__form textarea::-webkit-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-moz-placeholder,
+.quote__form textarea::-moz-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input:-ms-input-placeholder,
+.quote__form textarea:-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-ms-input-placeholder,
+.quote__form textarea::-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-webkit-input-placeholder, .quote__form textarea::-webkit-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-moz-placeholder, .quote__form textarea::-moz-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input:-ms-input-placeholder, .quote__form textarea:-ms-input-placeholder {
+    color: #f48c8f;
+}
+
+.quote__form input::-ms-input-placeholder, .quote__form textarea::-ms-input-placeholder {
+    color: #f48c8f;
+}
+
 .quote__form input::placeholder,
 .quote__form textarea::placeholder {
     color: #f48c8f;
@@ -784,4 +910,59 @@ body {
 }
 
 /*---- end SOCIAL FOOTER -----*/
+/*======================*/
+
+/*==== MODAL WINDOW ====*/
+.wrapper__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1d202781;
+    z-index: 10;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.modal__window {
+    background-color: #dedede;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.modal__window button[name="ok"] {
+    margin-top: 10px;
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+
+.modal__window p:first-child,
+.modal__window p:nth-child(2) {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.modal__window hr {
+    width: 280px;
+    height: 3px;
+    background: #000;
+}
 /*======================*/

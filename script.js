@@ -10,6 +10,13 @@ let slide = document.querySelector('.slider')
 let clone = slide.innerHTML;
 let nextBtn = document.querySelector('.img_next');
 let prevBtn = document.querySelector('.img_prev');
+let btnFirstMobile = document.querySelector('#first-mobile');
+let firstMobile = document.querySelector('.slider__img[alt="image1"]');
+let btnSecondMobile = document.querySelector('#second-mobile');
+let secondMobile = document.querySelector('.slider__img[alt="image2"]');
+//for CONTACT
+let formContact = document.forms['quote__form'];
+
 
 
 navMenu.addEventListener('click', (e) => changeLink(navMenu, e));
@@ -19,6 +26,9 @@ galleryImg.addEventListener('click', choiceImg);
 navMenu.addEventListener('click', scrollToSection);
 nextBtn.addEventListener('click', changeSlide);
 prevBtn.addEventListener('click', changeSlide);
+btnFirstMobile.addEventListener('click', () => onOffBackground(firstMobile));
+btnSecondMobile.addEventListener('click', () => onOffBackground(secondMobile));
+formContact.addEventListener('submit', createModal);
 
 
 function changeLink(parent, e) {
@@ -98,3 +108,37 @@ function choiceImg(e) {
         elem.parentElement.style.border = '5px solid #F06C64';
     }
 }
+
+function onOffBackground(elem) {
+    elem.classList.toggle('back-black');
+}
+
+function createModal(e) {
+    e.preventDefault();
+    let wrapperModal = document.createElement('div'),
+        modal = document.createElement('div');
+    const [name, email, subject, describe] = e.target.elements;
+
+    wrapperModal.classList.add('wrapper__modal');
+    modal.classList.add('modal__window');
+
+    modal.innerHTML = `
+    ${(name.value) ? '<p>' + name.value + '</p>' : ''}
+    ${(email.value) ? '<p>' + email.value + '</p>' : ''}
+    <br><hr><br>
+    <p>The letter was sent</p>
+    ${(subject.value) ? '<p>Subject: ' + subject.value + '</p>' : '<p>Without subject</p>'}
+    ${(describe.value) ? '<p>Describe: ' + describe.value + '</p>' : '<p>Without subject</p>'}
+    <button name='ok'>OK</button>`;
+
+    let btn = modal.querySelector('button');
+    btn.addEventListener('click', function () {
+        modal.innerHTML = '';
+        modal.remove();
+        wrapperModal.remove();
+        btn.removeEventListener('click', function () {});
+    });
+
+    document.body.appendChild(wrapperModal);
+    wrapperModal.appendChild(modal);
+};
